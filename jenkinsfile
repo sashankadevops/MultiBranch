@@ -1,3 +1,6 @@
+
+/// hi
+
 properties([[$class: 'GithubProjectProperty', 
 displayName: '',
 projectUrlStr: 'https://github.com/sashankadevops/MultiBranch.git/'], pipelineTriggers([githubPush()])])
