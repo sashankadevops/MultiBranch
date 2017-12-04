@@ -2,8 +2,9 @@
 /// hi
 
 properties([[$class: 'GithubProjectProperty', 
-displayName: '',
-projectUrlStr: 'https://github.com/sashankadevops/MultiBranch.git/'], pipelineTriggers([githubPush()])])
+           displayName: '',
+           projectUrlStr: 'https://github.com/sashankadevops/MultiBranch.git/'], 
+           pipelineTriggers([githubPush()])])
 
 pipeline {
     agent any 
