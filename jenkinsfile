@@ -11,11 +11,12 @@ properties([[$class: 'GithubProjectProperty',
 
 pipeline {
     agent any 
-    properties([parameters([choice(choices: ['/usr/etc', '/usr/etc/passwd'],
+   parameters {
+                     ([choice(choices: ['/usr/etc', '/usr/etc/passwd'],
                       description: '', name: 'File'), 
                       booleanParam(defaultValue: true, description: '', name: 'Test'), 
-                      string(defaultValue: 'USA', description: '', name: 'Country')]),
-                      pipelineTriggers([])])
+                      string(defaultValue: 'USA', description: '', name: 'Country')])
+                 }
 
     stages {
         stage('Build') { 
