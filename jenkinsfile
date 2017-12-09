@@ -4,15 +4,18 @@
 properties([[$class: 'GithubProjectProperty', 
            displayName: '',
            projectUrlStr: 'https://github.com/sashankadevops/MultiBranch.git/'], 
-           pipelineTriggers([githubPush()])])
-           
+           pipelineTriggers([githubPush()])])  
            
            
            
 
 pipeline {
     agent any 
-    properties([parameters([choice(choices: ['/usr/etc', '/usr/etc/passwd'], description: '', name: 'File'), booleanParam(defaultValue: true, description: '', name: 'Test'), string(defaultValue: 'USA', description: '', name: 'Country')]), pipelineTriggers([])])
+    properties([parameters([choice(choices: ['/usr/etc', '/usr/etc/passwd'],
+                      description: '', name: 'File'), 
+                      booleanParam(defaultValue: true, description: '', name: 'Test'), 
+                      string(defaultValue: 'USA', description: '', name: 'Country')]),
+                      pipelineTriggers([])])
 
     stages {
         stage('Build') { 
