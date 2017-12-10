@@ -13,7 +13,7 @@ pipeline {
     agent any 
    parameters { 
                       choice(choices: 'Deploy\nDebug', description: 'Choose the environment', name: 'ENVIRONMENT')
-                      booleanParam(defaultValue: true, description: '', name: 'Test'), 
+                      booleanParam(defaultValue: true, description: '', name: 'Test')
                       string(defaultValue: 'USA', description: '', name: 'Country')
                  }
 
